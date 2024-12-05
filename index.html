@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG Food Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SG Food Reviews</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Singapore's Best Food Spots</h1>
+            <p>Find top-rated restaurants in your area</p>
+        </section>
+
+        <section class="search-filters">
+            <div class="filter-container">
+                <div class="filter-box">
+                    <label for="cuisine">Cuisine Type</label>
+                    <select id="cuisine">
+                        <option value="">Select Cuisine</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="korean">Korean</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="malay">Malay</option>
+                        <option value="indian">Indian</option>
+                        <option value="western">Western</option>
+                        <option value="thai">Thai</option>
+                    </select>
+                </div>
+
+                <div class="filter-box">
+                    <label for="area">Area</label>
+                    <select id="area">
+                        <option value="">Select Area</option>
+                        <option value="amk">Ang Mo Kio</option>
+                        <option value="serangoon">Serangoon</option>
+                        <option value="tampines">Tampines</option>
+                        <option value="jurong">Jurong</option>
+                        <option value="woodlands">Woodlands</option>
+                        <option value="bedok">Bedok</option>
+                    </select>
+                </div>
+
+                <button class="search-btn">Search</button>
+            </div>
+        </section>
+
+        <div class="search-limit-warning" style="text-align: center; padding: 10px; color: #666; font-size: 0.9rem;">
+            Daily searches may be limited to maintain free tier usage
+        </div>
+
+        <section class="results">
+            <h2>Top 20 Restaurants</h2>
+            <div class="restaurant-grid">
+                <div id="loading" style="display: none; text-align: center; padding: 20px;">
+                    Searching for restaurants...
+                </div>
+                <div id="error" style="display: none; text-align: center; padding: 20px; color: red;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SG Food Reviews. All rights reserved.</p>
+    </footer>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvPcEAu4fAWa4UnrrG5WgQ1R9PDXBmWXk&libraries=places&callback=initMap"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
